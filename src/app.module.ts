@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { ProductSchema } from './products/schema/product.schema';
 import { ProductsService } from './products/products.service';
 import { ProductsResolver } from './products/products.resolver';
+import { GraphQLError, GraphQLFormattedError } from 'graphql';
 
 @Module({
   imports: [
@@ -25,6 +26,12 @@ import { ProductsResolver } from './products/products.resolver';
       driver: ApolloDriver,
       playground: true,
       autoSchemaFile: true,
+      formatError: (error: GraphQLError) => {
+        const graphQLFormattedError: GraphQLFormattedError = {
+          message: error?.message,
+        };
+        return graphQLFormattedError;
+      },
     }),
   ],
   controllers: [AppController],

@@ -1,0 +1,211 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-07-24T20:31:47.084Z",
+  "__export_source": "insomnia.desktop.app:v2023.4.0",
+  "resources": [
+    {
+      "_id": "req_f935976c36b145f9a5bfbf329970ca56",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1690230504310,
+      "created": 1690230448639,
+      "url": "{{ _.url }}graphql",
+      "name": "GET Products",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Query {\\n  products  {\\n    _id\\n    name\\n    description\\n    quantity\\n    price\\n    image\\n  }\\n}\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1690230448639,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "parentId": null,
+      "modified": 1684890514799,
+      "created": 1684890514799,
+      "name": "GraphQL Products",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_8180c51d4ed24b81a6d918f6b6ccd2ad",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1690230531223,
+      "created": 1690230514873,
+      "url": "{{ _.url }}graphql",
+      "name": "GET Product",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"query Query {\\n  product(id:\\\"64bede21cf17d115d314fd0f\\\")  {\\n    _id\\n    name\\n    description\\n    quantity\\n    price\\n    image\\n  }\\n}\",\"operationName\":\"Query\"}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1689062497105.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1e1285211c7e47f58e9c137321a32a6a",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1685556105313,
+      "created": 1685556009706,
+      "url": "{{ _.url }}graphql",
+      "name": "UpdateProduct",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation UpdateProduct($id:String!, $updateProductInput: UpdateProductInput!) {\\n  updateProduct(id:$id, updateProductInput: $updateProductInput) {\\n    name\\n    description\\n    quantity\\n    price\\n  }\\n}\",\"operationName\":\"UpdateProduct\",\"variables\":{\"id\":\"646d61f859d7ddfdeaf26d5a\",\"updateProductInput\":{\"name\":\"Example Product Name 453\",\"description\":\"This is an example product description 4\",\"quantity\":100,\"price\":300}}}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1685556009706,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d0c8b9d6148b49a5a57baa20ef4d178a",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1686761138706,
+      "created": 1686761068611,
+      "url": "{{ _.url }}graphql",
+      "name": "DeleteProduct",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation RemoveProduct($id:String!) {\\n  removeProduct(id:$id) {\\n    name\\n    description\\n    quantity\\n    price\\n  }\\n}\",\"operationName\":\"emoveProduct\",\"variables\":{\"id\":\"647790bb736495f852dec7ff\"}}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1685223270517.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f698a0f4c122465ca19356987b0fe846",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1684890624176,
+      "created": 1684890531329,
+      "url": "{{ _.url }}graphql",
+      "name": "Create Product",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/graphql",
+        "text": "{\"query\":\"mutation CreateProduct($createProductInput: CreateProductInput!) {\\n\\tcreateProduct(createProductInput: $createProductInput) {\\n\\t\\tname\\n\\t\\tdescription\\n\\t\\tquantity\\n\\t\\tprice\\n\\t}\\n}\\n\",\"operationName\":\"CreateProduct\",\"variables\":{\"createProductInput\":{\"name\":\"Example Product Name 2023\",\"description\":\"This is an example product description\",\"quantity\":10,\"price\":180}}}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1684890531329,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_11c4ad3a8be104e3e4a5c3f629c3d7b7f91f4df5",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1684890565722,
+      "created": 1684890514805,
+      "name": "Base Environment",
+      "data": {
+        "url": "http://localhost:3003/"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1684890514806,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_11c4ad3a8be104e3e4a5c3f629c3d7b7f91f4df5",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1684890514807,
+      "created": 1684890514807,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_5bd090dc6be1494bbfcce3d3a39f15f7",
+      "parentId": "wrk_22431ffecc4d4bd8a22555f2c4a60c54",
+      "modified": 1684890514800,
+      "created": 1684890514800,
+      "fileName": "GraphQL Products",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}

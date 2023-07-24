@@ -17,9 +17,8 @@ export class ProductsService {
       }
       return product;
     } catch (error) {
-      console.error('Error Occurs=>' + JSON.stringify(error));
       return {
-        error: 'An error occurs=> ' + JSON.stringify(error),
+        error,
       };
     }
   }
@@ -65,14 +64,12 @@ export class ProductsService {
         if (productDeleted.deletedCount <= 1) {
           return product;
         }
+      } else {
+        throw new NotFoundException('Product not found!');
       }
     } catch (error) {
-      console.error(
-        'An error Occurs deleting product=>' + JSON.stringify(error),
-      );
       return {
-        message: 'An error occurs in the form',
-        error: 'An error occurs' + JSON.stringify(error),
+        error,
       };
     }
   }

@@ -43,16 +43,16 @@ $ npm install
 
 ## Run the Docker Container 
 
+In order to build our Dockers Containers you need run this command:
+
 ```bash
 $ npm run docker:build
 ```
 ## Running in Development mode
-You need to stop the container named: `nest-mongo-api-container` before to run these commands:
+If you need to run the app in Development mode first you need to stop the container named: `nest-mongo-api-container` then you will need to start the container named `nest-app-db-products-container` , then you can run this command:
+
 ```bash
 # development
-$ npm run start
-
-# watch mode
 $ npm run start:dev
 ```
 ## Running in Poduction mode
@@ -63,8 +63,9 @@ $ npm run start:prod
 ```
  
 # GraphQL 
-This microservice has this GraphQL Schema
-```gql
+Once that you are running the Docker Containers you will have a GraphQL API located in this URL: `http://localhost:3003/graphql`. 
+
+```graphql
 type Product {
   # ID of the Product
   _id: String!
@@ -105,7 +106,7 @@ input UpdateProductInput {
   # The name of the product
   name: String
   # Main image URL of the Product ,size minimun 320px width and 200px height
-  image: String!
+  image: String
   # The description of the product
   description: String
   # The quantity of the product
@@ -128,6 +129,3 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## License
-
-Nest is [MIT licensed](LICENSE).

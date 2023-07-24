@@ -15,9 +15,8 @@ export class ProductsResolver {
     try {
       return this.productsService.create(createProductInput);
     } catch (error) {
-      console.error(error);
       return {
-        error: 'An error occurs: ' + JSON.stringify(error),
+        error,
       };
     }
   }
