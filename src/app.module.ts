@@ -17,8 +17,6 @@ import { GraphQLError, GraphQLFormattedError } from 'graphql';
       process.env.DB_URL + process.env.DB_HOST + ':' + process.env.DB_PORT,
       {
         dbName: process.env.DB_NAME,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
       },
     ),
     MongooseModule.forFeature([{ name: 'Products', schema: ProductSchema }]),

@@ -20,7 +20,7 @@ This project is about some products of any type and was created for educational 
 
 ## Requirements 
 - [Docker Desktop](https://www.docker.com/)
-- [Node.js v19.9.0](https://nodejs.org/dist/v19.9.0/docs/api/)
+- [Node.js](https://nodejs.org/)
 
 ## Configuration
 
